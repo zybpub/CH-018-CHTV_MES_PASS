@@ -1,0 +1,90 @@
+﻿-- phpMyAdmin SQL Dump
+-- version 4.8.4
+-- https://www.phpmyadmin.net/
+--
+-- 主机： 127.0.0.1:3306
+-- 生成日期： 2020-01-02 02:51:05
+-- 服务器版本： 5.7.24
+-- PHP 版本： 7.2.14
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- 数据库： `jczx_mysql_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `white_balance_hw`
+--
+
+DROP TABLE IF EXISTS `white_balance_hw`;
+CREATE TABLE IF NOT EXISTS `white_balance_hw` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `MO` varchar(100) NOT NULL COMMENT '模组',
+  `SN` varchar(100) NOT NULL COMMENT '序列号',
+  `WORKSTATIONID` varchar(100) NOT NULL COMMENT '工作站ID',
+  `SOFT_VER` varchar(100) NOT NULL,
+  `ERRORS` varchar(100) NOT NULL,
+  `色温0高亮标准x` float(6,4) NOT NULL,
+  `色温0高亮标准y` varchar(100) NOT NULL,
+  `色温0低亮标准x` varchar(100) NOT NULL,
+  `色温0低亮标准y` varchar(100) NOT NULL,
+  `色温1高亮标准x` varchar(100) NOT NULL,
+  `色温1高亮标准y` varchar(100) NOT NULL,
+  `色温1低亮标准x` varchar(100) NOT NULL,
+  `色温1低亮标准y` varchar(100) NOT NULL,
+  `色温2高亮标准x` varchar(100) NOT NULL,
+  `色温2高亮标准y` varchar(100) NOT NULL,
+  `色温2低亮标准x` varchar(100) NOT NULL,
+  `色温2低亮标准y` varchar(100) NOT NULL,
+  `色温0高亮真实R` varchar(100) NOT NULL,
+  `色温0高亮真实G` varchar(100) NOT NULL,
+  `色温0高亮真实B` varchar(100) NOT NULL,
+  `色温0低亮真实R` varchar(100) NOT NULL,
+  `色温0低亮真实G` varchar(100) NOT NULL,
+  `色温0低亮真实B` varchar(100) NOT NULL,
+  `色温0高亮真实x` varchar(100) NOT NULL,
+  `色温0高亮真实y` varchar(100) NOT NULL,
+  `色温0低亮真实x` varchar(100) NOT NULL,
+  `色温0低亮真实y` varchar(100) NOT NULL,
+  `色温1高亮真实R` varchar(100) NOT NULL,
+  `色温1高亮真实G` varchar(100) NOT NULL,
+  `色温1高亮真实B` varchar(100) NOT NULL,
+  `色温1低亮真实R` varchar(100) NOT NULL,
+  `色温1低亮真实G` varchar(100) NOT NULL,
+  `色温1低亮真实B` varchar(100) NOT NULL,
+  `色温1高亮真实x` varchar(100) NOT NULL,
+  `色温1高亮真实y` varchar(100) NOT NULL,
+  `色温1低亮真实x` varchar(100) NOT NULL,
+  `色温1低亮真实y` varchar(100) NOT NULL,
+  `色温2高亮真实R` varchar(100) NOT NULL,
+  `色温2高亮真实G` varchar(100) NOT NULL,
+  `色温2高亮真实B` varchar(100) NOT NULL,
+  `色温2低亮真实R` varchar(100) NOT NULL,
+  `色温2低亮真实G` varchar(100) NOT NULL,
+  `色温2低亮真实B` varchar(100) NOT NULL,
+  `色温2高亮真实x` varchar(100) NOT NULL,
+  `色温2高亮真实y` varchar(100) NOT NULL,
+  `色温2低亮真实x` varchar(100) NOT NULL,
+  `色温2低亮真实y` varchar(100) NOT NULL,
+  `调试时间` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `结论` varchar(100) NOT NULL,
+  `良品` bit(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='华为白平衡测试数据表';
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

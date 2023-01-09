@@ -1,0 +1,14 @@
+﻿CREATE TABLE `passmes_data` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `MO` varchar(50) DEFAULT NULL,
+ `SN` varchar(50) NOT NULL,
+ `WORKSTATIONID` varchar(50) DEFAULT NULL,
+ `SOFT_VER` varchar(50) DEFAULT NULL,
+ `ERROR_CODE` varchar(50) DEFAULT NULL,
+ `ERROR_SPOT` varchar(50) DEFAULT NULL,
+ `testdate` varchar(50) DEFAULT NULL,
+ `result` varchar(50) DEFAULT NULL,
+ `mesreply` varchar(200) DEFAULT NULL,
+ `memo` varchar(200) DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8

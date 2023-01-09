@@ -1,0 +1,30 @@
+﻿database:jczx_mysql_db  排序规则：utf8_general_ci
+
+root jczx
+设置root用户密码:
+set password =password('jczx');
+flush privileges;
+
+ 
+表:laiyatest
+
+创建只读用户:laiya_r  123456
+CREATE USER 'laiya_r'@'%' IDENTIFIED BY '123456';
+GRANT SELECT  ON  laiyatest.* TO 'laiya_r'@'%' IDENTIFIED BY '123456';
+flush privileges;
+
+创建可读写用户: laiya_wr wr1234
+CREATE USER 'laiya_wr'@'%' IDENTIFIED BY 'wr1234';
+GRANT SELECT,insert,update,delete  ON  laiyatest.* TO 'laiya_wr'@'%' IDENTIFIED BY 'wr1234';
+flush privileges;
+
+表:gamma
+创建只读用户:gamma_r 123456
+CREATE USER 'gamma_r'@'%' IDENTIFIED BY '123456';
+GRANT SELECT  ON  gamma.* TO 'gamma_r'@'%' IDENTIFIED BY '123456';
+flush privileges;
+
+创建可读写用户:gamma_r 123456
+CREATE USER 'gamma_wr'@'%' IDENTIFIED BY 'wr1234';
+GRANT SELECT,insert,update,delete  ON  gamma.* TO 'gamma_r'@'%' IDENTIFIED BY 'wr1234';
+flush privileges;
