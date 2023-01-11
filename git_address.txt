@@ -1,1 +1,5 @@
 https://gitee.com/zybpub_suresh166/ch-018-chtv-mes-transit.git
+
+
+public:
+https://github.com/zybpub/CH-018-CHTV_MES_PASS.git
